@@ -1,0 +1,22 @@
+
+
+p,a{
+    padding: 0;
+    margin: 0;
+}
+.f_row{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+.f_col{
+    display: flex;
+    flex-direction: column;
+}
+
+.j_c_a{
+    justify-content: space-around;
+}
+.j_c_b{
+    justify-content: space-between;
+}
