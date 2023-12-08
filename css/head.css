@@ -1,6 +1,5 @@
 .head_wrap{
     width: 100vw;
-    background-color: #ddd;
 }
 .head_top{
     width: 100%;
@@ -10,5 +9,5 @@
     height: 20px;
 }
 .head_right{
-    font-size: 1.3rem;
+    font-size:1rem;
 }
