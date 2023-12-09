@@ -4,6 +4,9 @@ p,a{
     padding: 0;
     margin: 0;
 }
+body{
+    min-width: 1300PX;
+}
 .f_row{
     display: flex;
     flex-direction: row;
@@ -19,4 +22,8 @@ p,a{
 }
 .j_c_b{
     justify-content: space-between;
+}
+.dropdown-menu{
+    border: none;
+    background-color: transparent;
 }
