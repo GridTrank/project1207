@@ -48,31 +48,112 @@
     color: #000;
     font-size: 18px;
     cursor: pointer;
+    padding: 10px 0;
     
 }
-.head_logo_wrap .label_list .label_item.active{
+.head_logo_wrap .label_list .label_item:hover{
     color: #E6C1B8;
 }
 .head_logo_wrap .label_list .dropdown-menu{
     box-shadow: 0px 0px 3px 0px rgba(0, 0, 0, 0.3);
-    top: 5px !important;
+    border-radius: 0;
 }
 .head_logo_wrap .label_list .menu_list{
-    padding: 10px 0;
+    padding:  0;
     background-color: rgba(255, 255, 255, 0.9);
-    width: 800px;
+    width: 660px;
     flex-wrap: wrap;
+    
 }
 .head_logo_wrap .label_list .menu_list .menu_item{
-    width: 240px;
+    width: 220px;
     color: #9E9D98;
     font-size: 16px;
     padding:3px 20px;
+    padding-left: 40px;
 }
 .head_logo_wrap .label_list .menu_list .menu_item:hover{
     color: #fff;
     background-color: #E6C1B8;
 }
+.menu_icon{
+    width: 17px;
+}
 .head_logo_wrap .search{
     width: 25px;
+}
+
+.nav_wrap{
+    justify-content: space-between;
+    align-items: center;
+    height: 100px;
+}
+
+.nav_list_scroll{
+    width: 82vw;
+    /* overflow: hidden; */
+    /* height: 500px; */
+    position: relative;
+    height: 100%
+}
+.nav_list{
+    position: absolute;
+    top: 0;
+    height: 100%;
+}
+.arrow_wrap{
+    width: 150px;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #fff;
+    position: relative;
+    z-index: 111;
+    flex-shrink: 0;
+}
+.nav_list .dropdown_wrap{
+    height: 100%;
+}
+.nav_list .nav_item{
+    width: 200px;
+    height: 100%;
+    flex-shrink: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+}
+.nav_list .nav_item:hover{
+    background-color: #E6C1B8;
+}
+.nav_list .nav_item .nav_icon{
+    width: 120px;
+}
+
+.nav_wrap .arrow{
+    width: 30px;
+    cursor: pointer;
+}
+.nav_list .dropdown-menu{
+    background-color: #E6C1B8;
+    width: 660px;
+    border-radius: 0;
+}
+.nav_list .menu_list{
+    padding: 10px 0;
+    background-color: transparent;
+    flex-wrap: wrap;
+}
+.nav_list .menu_list .menu_item{
+    width: 220px;
+    color: #fff;
+    font-size: 16px;
+    padding:3px 20px;
+    cursor: pointer;
+    padding-left: 40px;
+}
+.nav_list .menu_list .menu_item:hover{
+    background-color: #fff;
+    color: #E6C1B8;
 }
