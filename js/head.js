@@ -21,11 +21,22 @@ class Head extends HTMLElement {
         <img src="./Elements/logo.png" class="logo" />
         <div class="label_list f_row"></div>
     </div>
-    <div class="nav_list f_row">
-        
-    </div>
+    <div class="nav_wrap f_row">
+            <div class="carousel-control-prev arrow_wrap"  data-bs-target="#carouselExample" data-bs-slide="prev">
+                <img src="./Elements/nav-left.png" class="arrow">
+            </div>
+            
+            <div class="nav_list_scroll">
+                <div class="nav_list f_row carousel slide" id="carouselExample" >
+                   
+                </div>
+            </div>
+            <div class="carousel-control-next arrow_wrap"  data-bs-target="#carouselExample" data-bs-slide="next">
+                <img src="./Elements/nav-right.png" class="arrow">
+            </div>
+        </div>
         `
-        // $('#head').append(h1)
+        $('#head').append(h1)
         // 头部label
         let headLabelList = [
             {
@@ -121,40 +132,55 @@ class Head extends HTMLElement {
         })
         $('.menu_item').click(function (e) {
             console.log(121212, $(this).attr('data-url'))
+            
         })
-        // nav
        
-        let navHtml=''
-        for (var i = 0; i < navList.length; i++) {
-            navHtml += `<div class= "dropdown_wrap " data-index=${i}>
-                    <div data-bs-toggle="dropdown"  class="nav_item " data-hover="dropdown">
-                        <img src="${navList[i].img}" class="nav_icon">
+        let navHtml='<div class="carousel-inner">'
+        let newNavList=group(navList,6)
+        for (var i = 0; i < newNavList.length; i++) {
+            navHtml+= `
+                <div class="carousel-item ${i===0?'active':''}" >
+            `
+            let cNavList=newNavList[i]
+            
+            for(var j=0;j<cNavList.length;j++){
+
+                navHtml += `<div class= "dropdown_wrap " data-index=${j}>
+                    <div data-bs-toggle="dropdown" class="nav_item " data-value=${cNavList[j].value} >
+                        <img src="${cNavList[j].img}" class="nav_icon show_black">
+                        <img src="${cNavList[j].whiteImg}" class="nav_icon show_white">
                     </div>
                     <div class="dropdown-menu">
                         <div class="menu_list f_row">
                     `
-            navList[i].child.forEach((e) => {
-                navHtml += `<div class="menu_item f_row" data-url=${e.url}>
-                                <img class="menu_icon" src="${e.icon || ''}">
-                                ${e.c_label}
-                            </div>`
-            })
-            navHtml += ` </div>  </div> </div>`
+                    cNavList[j].child.forEach((e) => {
+                        navHtml += `<div class="menu_item f_row" data-url=${e.url}>
+                                        <img class="menu_icon" src="${e.icon || ''}">
+                                        ${e.c_label}
+                                    </div>`
+                })
+                navHtml += ` </div>  </div> </div>`
+            }
+            navHtml += ` </div>`
+           
         }
-
+        navHtml+='</div>'
         $('.nav_list').append(navHtml)
-
-        $('.dropdown_wrap').hover(function(e){
-            console.log(11111)
-            if(e.type=='mouseenter'){
-                $(this).find('.dropdown-menu').click()
-           }
-            // $(this).addClass('show')
-            // $(this).siblings().removeClass('show')
-        })
+        
     }
 
 
 }
+function group(array, subNum) {
+    let index = 0;
+    let newArray = [];
+    while(index < array.length) {
+        newArray.push(array.slice(index, index += subNum));
+    }
+    return newArray;
+}
+
+
+
 
 window.customElements.define("page-head", Head)

@@ -30,3 +30,6 @@ body{
     border: none;
     background-color: transparent;
 }
+.dropdown:hover .dropdown-menu{
+    display: block;
+}
