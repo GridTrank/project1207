@@ -6,7 +6,7 @@ a {
 
 body {
 	min-width: 1300PX;
-	overflow: hidden;
+	overflow-x: hidden;
 }
 
 ::-webkit-scrollbar {
