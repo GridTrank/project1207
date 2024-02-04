@@ -57,6 +57,7 @@ body {
 	border-radius: 12.5rem;
 	border: 0.125rem solid #E6C1B8;
 	margin: 0 auto;
+	font-size: 0.8rem;
 	color: #E6C1B8;
 	font-weight: 600;
 	cursor: pointer;
@@ -65,13 +66,13 @@ body {
 }
 
 .gowns_wrap .title {
-	font-size: 2.625rem;
+	font-size: 2rem;
 	font-weight: 600;
 	text-align: center;
 }
 
 .gowns_prev {
-	left: -120px;
+	left: -8.5rem;
 	opacity: 1;
 }
 
@@ -85,7 +86,7 @@ body {
 }
 
 .gowns_next {
-	right: -120px;
+	right: -8.5rem;
 	opacity: 1;
 }
 
@@ -110,19 +111,19 @@ body {
 }
 
 .flower1 {
-	left: -80px;
-	top: 50px;
+	left: -6rem;
+	top: 2rem;
 	width: 9.375rem;
 }
 
 .flower2 {
-	right: -60px;
-	top: 6.25rem;
+	right: -6rem;
+	top: 9rem;
 	width: 12.5rem;
 }
 
 .flower4 {
-	left: -140px;
+	left: -18rem;
 	top: 21.25rem;
 	width: 13.75rem;
 }
@@ -132,7 +133,7 @@ body {
 }
 
 .events-wrap .title {
-	font-size: 2.625rem;
+	font-size: 2rem;
 	font-weight: 600;
 	display: flex;
 	align-items: center;
@@ -244,7 +245,7 @@ body {
 }
 
 .weddin-wrap .title {
-	font-size: 2.625rem;
+	font-size: 2rem;
 	font-weight: 600;
 }
 
@@ -282,7 +283,7 @@ body {
 }
 
 .ideas-wrap .title {
-	font-size: 2.625rem;
+	font-size: 2rem;
 	font-weight: 600;
 }
 
@@ -327,12 +328,12 @@ body {
 	/* align-items: center; */
 	flex-direction: column;
 	justify-content: center;
-	width: 21.875rem;
+	width: 24rem;
 	margin-right: 1.875rem;
 	flex-shrink: 0;
 }
 .traditions-wrap .title{
-	font-size: 2.625rem;
+	font-size: 2rem;
 	font-weight: 600;
 }
 .traditions-wrap .right_pic {
@@ -346,7 +347,7 @@ body {
 }
 
 .guid-wrap .title{
-	font-size: 2.625rem;
+	font-size: 2rem;
 	font-weight: 600;
 	text-align: center;
 }
@@ -358,4 +359,74 @@ body {
 }
 .guid-wrap p {
 	margin-top: 1.25rem;
+}
+
+
+.events-mobile {
+	display: none;
+}
+
+.footer {
+	background-color: #3d3d3d;
+	padding: 6rem 10rem;
+	color: #fff;
+	position: relative;
+}
+
+.footer-nav{
+	display: flex;
+	flex-wrap: wrap;
+	padding:0;
+}
+
+.footer-nav li {
+	width: 30.33%;
+	list-style-type: none; 
+	color: #fff;
+	flex-shrink: 0;
+}
+.footer .app {
+	display: flex;
+	justify-content: space-between;
+	margin-top: 2rem;
+}
+.footer .app img{
+	width:8rem;
+}
+
+.footer .tool {
+	position: absolute;
+	right: 0;
+	top:3rem;
+}
+.footer .tool li{
+	list-style-type: none; 
+} 
+.footer .tool img {
+	width: 4rem;
+}
+
+.footer .contact-wrap {
+	display: flex;
+	justify-content: space-between;
+	margin-top: 3rem;
+}
+.footer .contact {
+	display: flex;
+}
+.footer .contact li {
+	list-style-type: none; 
+}
+
+.footer .contact img {
+	width: 2rem;
+}
+
+.footer .copyright {
+	display: flex;
+}
+
+.footer .copyright img {
+	width: 3rem;
+	flex-shrink: 0;
 }

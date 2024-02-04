@@ -17,11 +17,13 @@
 
 		<link rel="stylesheet" href="./css/common.css" />
 		<link rel="stylesheet" href="./css/head.css" />
+
+		<link rel="stylesheet" href="./css/mobile.css" media="(min-device-width:100px) and (max-device-width:480px)">
+		<link rel="stylesheet" href="./css/tablet.css" media="(min-device-width:480px) and (max-device-width:960px)">
 		<script src="./js/headMenuData.js"></script>
 		<script src="./js/jquery.js"></script>
 		<script src="./js/rem.js"></script>
 	</head>
-
 	<body>
 		<div id="head" class="head_wrap">
 			<page-head></page-head>
@@ -53,6 +55,8 @@
 			</div>
 		</div>
 
+
+
 		<div class="main">
 			<div class="flower flower1">
 				<img src="./Elements/Dried flower elements/BB homepage_Flower elements 1.png" class="d-block w-100">
@@ -63,7 +67,7 @@
 			<div class="gowns_wrap">
 				<div class="title">Gowns & Dresses</div>
 				<div class="gowns_show">
-					<div id="carouselExample" class="carousel slide">
+					<div id="gowns" class="carousel slide" data-bs-ride="carousel">
 						<div class="carousel-inner">
 							<div class="carousel-item active">
 								<img src="./Elements/BB homepage_Blissful Pay banner.png" class="d-block w-100"
@@ -79,19 +83,19 @@
 							</div>
 						</div>
 						<div class="carousel-indicators">
-							<button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0"
-								class="active" aria-current="true" aria-label="Slide 1"></button>
-							<button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1"
+							<button type="button" data-bs-target="#gowns" data-bs-slide-to="0" class="active"
+								aria-current="true" aria-label="Slide 1"></button>
+							<button type="button" data-bs-target="#gowns" data-bs-slide-to="1"
 								aria-label="Slide 2"></button>
-							<button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2"
+							<button type="button" data-bs-target="#gowns" data-bs-slide-to="2"
 								aria-label="Slide 3"></button>
 						</div>
-						<button class="carousel-control-prev gowns_prev" type="button" data-bs-target="#carouselExample"
+						<button class="carousel-control-prev gowns_prev" type="button" data-bs-target="#gowns"
 							data-bs-slide="prev">
 							<span class="carousel-control-prev-icon" aria-hidden="true"></span>
 							<span class="visually-hidden">Previous</span>
 						</button>
-						<button class="carousel-control-next gowns_next" type="button" data-bs-target="#carouselExample"
+						<button class="carousel-control-next gowns_next" type="button" data-bs-target="#gowns"
 							data-bs-slide="next">
 							<span class="carousel-control-next-icon" aria-hidden="true"></span>
 							<span class="visually-hidden">Next</span>
@@ -110,7 +114,7 @@
 					EVENTS & CONTESTS
 				</div>
 				<div class="events_show">
-					<div id="carouselExampleCaptions" class="carousel slide">
+					<div id="carouselExampleCaptions" class="carousel slide" data-bs-ride="carousel">
 						<div class="carousel-indicators">
 							<button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0"
 								class="active" aria-current="true" aria-label="Slide 1"></button>
@@ -244,6 +248,32 @@
 					<div class="btn">MORE EVENTS</div>
 				</div>
 			</div>
+
+			<div class="events-mobile">
+				<div class="title">
+					EVENTS
+				</div>
+				<div class="events-item">
+					<img src="./Elements/BB homepage_Grand draw icon.png" class="img d-block">
+					<p class="date">05 Jan - 31 Mar</p>
+					<p>[Ongoing Promotion] Opening Special @ The Robertson House by The Crest collection</p>
+					<p>09 : 00 AM - 09 : 00 PM</p>
+					<p>Free Admission</p>
+					<div class="btn">MORE INFO</div>
+				</div>
+				<div class="events-item">
+					<img src="./Elements/BB homepage_Grand draw icon.png" class="img d-block">
+					<p class="date">09 Feb - 17 Feb</p>
+					<p>A Romantic Escapade at One Farrer Hotel</p>
+					<p>09 : 00 AM - 09 : 00 PM</p>
+					<p>1 Farrer Park Station Road, Singapore 217562</p>
+					<p>Free Admission</p>
+					<div class="btn">MORE INFO</div>
+				</div>
+				<div class="more-btn">
+					<div class="btn">MORE EVENTS</div>
+				</div>
+			</div>
 			<div class="weddin-wrap">
 				<div class="pic">
 					<img src="./Elements/eg.jpeg" class="img d-block w-100">
@@ -298,7 +328,6 @@
 											highlighting
 											their memorable wedding moments.</div>
 										<div class="continue">continue reading</div>
-
 									</div>
 									<div class="item-info col">
 										<img src="./Elements/BB homepage_Grand draw icon.png" class="img d-block">
@@ -389,10 +418,85 @@
 					<p>We look forward to helping you with your wedding planning through our resources.</p>
 				</div>
 			</div>
-			<img src="./Elements/BB homepage_Blissful Pay banner.png" class="d-block w-100"
-												alt="...">
-		</div>
+			<img src="./Elements/BB homepage_Blissful Pay banner.png" class="d-block w-100" alt="...">
 
+		</div>
+		<div class="footer">
+			<ul class="footer-nav">
+				<li>FAQ</li>
+				<li>Events</li>
+				<li>Contact Us</li>
+				<li>E-Magazine</li>
+				<li>Vendors</li>
+				<li>Privacy Policy</li>
+				<li>Blissful Pay</li>
+				<li>Wedding Tools</li>
+				<li>Consumer Terms and Conditions</li>
+				<li>Sitemap</li>
+				<li>Blissful Outdoor Wedding Show</li>
+				<li>About Citrus Media</li>
+			</ul>
+			<div class="app">
+				<div>
+					<div class="name">GET THE APP</div>
+					<div class="img-box">
+						<img src="./Elements/top-icon2.png" />
+						<img src="./Elements/top-icon2.png" />
+					</div>
+				</div>
+				<div>
+					<div class="name">WE ACCEPT</div>
+					<div class="img-box">
+						<img src="./Elements/top-icon2.png" />
+						<img src="./Elements/top-icon2.png" />
+						<img src="./Elements/top-icon2.png" />
+						<img src="./Elements/top-icon2.png" />
+						<img src="./Elements/top-icon2.png" />
+					</div>
+				</div>
+			</div>
+			<ul class="tool">
+				<li>
+					<img src="./Elements/BB homepage_Grand draw icon.png" />
+				</li>
+				<li>
+					<img src="./Elements/BB homepage_Grand draw icon.png" />
+				</li>
+				<li>
+					<img src="./Elements/BB homepage_Up icon.png" />
+				</li>
+			</ul>
+			<div class="contact-wrap">
+				<ul class="contact">
+					<li>
+						<img src="Elements/user-icon.png" />
+					</li>
+					<li>
+						<img src="Elements/user-icon.png" />
+					</li>
+					<li>
+						<img src="Elements/user-icon.png" />
+					</li>
+					<li>
+						<img src="Elements/user-icon.png" />
+					</li>
+					<li>
+						<img src="Elements/user-icon.png" />
+					</li>
+					<li>
+						<img src="Elements/user-icon.png" />
+					</li>
+				</ul>
+				<div class="copyright">
+					<img src="Elements/user-icon.png" />
+					<div>
+						<p>Copyright © 2023 Citrus Media Pte. Ltd.</p>
+						<p>Reg No. : 200206092Z. All Rights Reserved</p>
+					</div>
+				</div>
+
+			</div>
+		</div>
 	</body>
 
 	<script src="./js/head.js"></script>

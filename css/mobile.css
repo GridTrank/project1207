@@ -1,0 +1,168 @@
+body,
+html {
+	min-width: 100% !important;
+	width: 100%;
+}
+
+.head_top,
+.head_logo_wrap .label_list {
+	display: none;
+}
+
+.head_logo_wrap .icon {
+	display: block;
+}
+
+.head_logo_wrap .label_list {
+	position: absolute;
+	width: 100%;
+	top: 6rem;
+	z-index: 100000;
+	background-color: #fff;
+}
+.head_logo_wrap .label_list .label_item {
+	padding: 1rem 2rem;
+}
+.head_logo_wrap {
+	height: 6rem;
+}
+
+.head_logo_wrap .icon img {
+	width: 3rem;
+}
+
+.head_logo_wrap .logo {
+	width: 10rem;
+}
+
+.nav_list .dropdown_wrap {
+	width: 100%;
+}
+
+.nav_list_scroll {
+	width: 100%;
+}
+
+.arrow_wrap {
+	width: 100px;
+}
+
+.gowns_wrap {
+	padding: 1.25rem 6rem;
+}
+
+.gowns_prev {
+	left: -4.5rem;
+}
+
+.gowns_next {
+	right: -4.5rem;
+}
+
+.traditions-wrap .info {
+	width: 30rem;
+}
+
+.traditions-wrap {
+	flex-wrap: wrap;
+}
+
+.traditions-wrap .right_pic {
+	flex-shrink: 0;
+}
+
+.events-wrap {
+	display: none;
+}
+
+.events-mobile {
+	display: block;
+}
+
+.events-mobile .title {
+	font-size: 2rem;
+	font-weight: 600;
+	text-align: center;
+}
+
+.events-mobile .events-item {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
+	line-height: 1.5;
+	color: #9E9D98;
+}
+
+.events-mobile .events-item .img {
+	width: 8rem;
+}
+
+.events-mobile .events-item .date {
+	font-size: 2rem;
+	color: #E1C896;
+	margin: 1rem 0;
+}
+
+.events-mobile .events-item .btn {
+	font-weight: 600;
+}
+
+
+.ideas-wrap {
+	padding: 0;
+	margin-top: 3rem;
+	display: flex;
+	flex-direction: column;
+}
+
+.ideas-wrap .info {
+	width: 100%;
+}
+
+.ideas-wrap .info .dec,
+.ideas-wrap .info .more-btn {
+	display: none;
+}
+
+.ideas-wrap .info .title {
+	text-align: center;
+}
+
+.ideas-wrap .ideas-show {
+	padding: 0 5rem;
+}
+
+
+.guid-wrap {
+	padding: 3rem;
+}
+
+
+.footer-nav {
+	flex-direction: column;
+}
+
+.footer-nav li {
+	width: 100%;
+}
+
+.footer .app {
+	flex-direction: column;
+}
+
+.footer .contact-wrap {
+	flex-direction: column;
+}
+
+.footer .copyright {
+	flex-direction: column;
+}
+
+.footer .contact img {
+	width: 3rem;
+}
+
+.footer .tool img {
+	width: 6rem;
+}
