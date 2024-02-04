@@ -6,9 +6,9 @@ setTimeout(() => {
   function setRem() {
     let width = document.documentElement.clientWidth
     let num = 0
-    if (width <= 640) {
+    if (width <= 480) {
       num = 800
-    } else if (width <= 980 && width > 640) {
+    } else if (width <= 980 && width > 480) {
       num = 1220
     } else if (width <= 1300 && width > 980) {
       num = 1320
