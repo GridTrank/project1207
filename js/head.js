@@ -887,15 +887,29 @@ class Head extends HTMLElement {
 			labelHtml += `<img src="./Elements/search.png" class="search"/>`
 		} else {
 
-			for (var i = 0; i < headLabelList[0].child.length; i++) {
+			for (var i = 0; i < headLabelList.length; i++) {
 				labelHtml += `<div class= "dropdown_wrap" data-index=${i}>
-			                        <div data-bs-toggle="dropdown" class="label_item"> 
-															<div class="menu_icon"><img  src="${headLabelList[0].child[i].icon || ''}" ></div>
-															${headLabelList[0].child[i].c_label}
+			                        <div class="label_item"> 
+															${headLabelList[i].label}
 															</div>
 			                        <div class="dropdown-menu" >
 			                            <div class="menu_list f_row">
 			                `
+
+				headLabelList[i].child.forEach((e) => {
+
+					labelHtml += `<div class="menu_item" data-url=${e.url} >
+
+														                          <div class="menu_icon"><img  src="${e.icon || ''}" ></div>
+
+														                          ${e.c_label}
+
+														                      </div>`
+					labelHtml += ` </div>
+																									    </div>
+																									    </div>`
+
+				})
 				labelHtml += ` </div>
 			        </div>
 			        </div>`
@@ -909,7 +923,7 @@ class Head extends HTMLElement {
 		})
 		$('.head_logo_wrap .icon').click(function(e) {
 			console.log($('.label_list').hasClass('show'))
-			if ($('.label_list').hasClass('show')){
+			if ($('.label_list').hasClass('show')) {
 				$('.label_list').removeClass('show')
 			} else {
 				$('.label_list').addClass('show')
