@@ -65,7 +65,7 @@
 
 .head_logo_wrap .label_list .label_item {
 	color: #000;
-	font-size: 2rem;
+	font-size: 1.125rem;
 	cursor: pointer;
 	padding: 10px 0;
 
@@ -117,7 +117,34 @@
 }
 
 .head_logo_wrap .search {
-	width: 25px;
+	position: relative;
+	margin-left: 1.25rem;
+}
+.head_logo_wrap .search input {
+	width: 0;
+	border:0;
+	padding:0;
+	position: absolute;
+	left: 0;
+	height: 40px;
+	padding-left: 0;
+	border-bottom: 2px solid #E6C1B8;
+	transition: all 0.5s;
+	
+}
+.head_logo_wrap .search input::active {
+	border: none;
+}
+.head_logo_wrap .search .btn {
+	width: 48px;
+	flex-shrink: 0;
+}
+.head_logo_wrap .search.show input{
+	width: 200px;
+	left: -200px;
+	padding-left: 10px;
+	box-shadow:2px 2px 5px rgba(0, 0, 0, 0.3);
+	position: absolute;
 }
 
 .nav_wrap {
@@ -156,8 +183,12 @@
 .nav_list .dropdown_wrap {
 	height: 100%;
 	display: inline-block;
-	width: 16.52%;
+	flex: 1;
+	padding: 0 0.625rem;
 	vertical-align: middle;
+}
+.nav_list .carousel-item {
+	text-align: center;
 }
 
 .nav_list .nav_item {

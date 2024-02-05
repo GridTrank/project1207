@@ -1,6 +1,9 @@
 class Head extends HTMLElement {
 	constructor() {
 		super()
+		attributeChangedCallback(name, oldValue, newValue) {
+			console.log(`属性 ${name} 已变更。`);
+		}
 		let h1 = ` 
         <div class="head_top f_row j_c_b">
         <div class="head_left f_row">
@@ -994,5 +997,8 @@ function group(array, subNum) {
 
 
 
-
+window.onresize = function() {
+	console.log(1221212121)
+	window.customElements.define("page-head", Head)
+}
 window.customElements.define("page-head", Head)

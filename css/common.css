@@ -3,10 +3,13 @@ a {
 	padding: 0;
 	margin: 0;
 }
-
+input {
+outline: none;
+}
 body {
 	min-width: 1300PX;
 	overflow-x: hidden;
+	width: 100%;
 }
 
 ::-webkit-scrollbar {
@@ -155,7 +158,9 @@ body {
 	left: -140px;
 	opacity: 1;
 }
-
+.mobile-search {
+	display: none;
+}
 .events_prev .carousel-control-prev-icon {
 	background-image: url('../Elements/BB homepage_Left arrow pink icon.png');
 	height: 3.125rem;
@@ -333,10 +338,12 @@ body {
 	margin-right: 1.875rem;
 	flex-shrink: 0;
 }
-.traditions-wrap .title{
+
+.traditions-wrap .title {
 	font-size: 2rem;
 	font-weight: 600;
 }
+
 .traditions-wrap .right_pic {
 	width: 68.75rem;
 
@@ -347,17 +354,20 @@ body {
 	text-align: center;
 }
 
-.guid-wrap .title{
+.guid-wrap .title {
 	font-size: 2rem;
 	font-weight: 600;
 	text-align: center;
 }
+
 .guid-wrap .dec {
 	color: #9E9D98;
 }
+
 .guid-wrap .big {
 	font-size: 1.25rem;
 }
+
 .guid-wrap p {
 	margin-top: 1.25rem;
 }
@@ -374,37 +384,41 @@ body {
 	position: relative;
 }
 
-.footer-nav{
+.footer-nav {
 	display: flex;
 	flex-wrap: wrap;
-	padding:0;
+	padding: 0;
 }
 
 .footer-nav li {
 	width: 30.33%;
-	list-style-type: none; 
+	list-style-type: none;
 	color: #fff;
 	flex-shrink: 0;
 }
+
 .footer .app {
 	display: flex;
 	justify-content: space-between;
 	margin-top: 2rem;
 }
-.footer .app img{
-	width:8rem;
+
+.footer .app img {
+	width: 8rem;
 }
 
 .footer .tool {
-	position: absolute;
+	position: fixed;
 	right: 0;
-	top:3rem;
+	bottom: 10rem;
 }
-.footer .tool li{
-	list-style-type: none; 
-} 
+
+.footer .tool li {
+	list-style-type: none;
+}
+
 .footer .tool img {
-	width: 4rem;
+	width: 8rem;
 }
 
 .footer .contact-wrap {
@@ -412,11 +426,13 @@ body {
 	justify-content: space-between;
 	margin-top: 3rem;
 }
+
 .footer .contact {
 	display: flex;
 }
+
 .footer .contact li {
-	list-style-type: none; 
+	list-style-type: none;
 }
 
 .footer .contact img {
@@ -431,3 +447,4 @@ body {
 	width: 3rem;
 	flex-shrink: 0;
 }
+
