@@ -1,6 +1,8 @@
-body,html {
-	min-width: 100%!important;
+body,
+html {
+	min-width: 100% !important;
 	width: 100%;
+	
 }
 
 .head_top,
@@ -13,25 +15,38 @@ body,html {
 }
 
 .head_logo_wrap .label_list {
-	position: absolute;
 	width: 100%;
-	top: 6rem;
-	left: 0;
 	z-index: 100000;
 	background-color: #fff;
+	
 }
 .head_logo_wrap .label_list .label_item {
 	padding: 1rem 2rem;
 }
 .head_logo_wrap {
 	height: 6rem;
+	display: flex;
+	flex-direction: column;
 }
 
 .head_logo_wrap .icon img {
 	width: 3rem;
 }
+
+.head_logo_wrap .logo {
+	width: 10rem;
+}
+
+.head_logo_wrap .logo-wrap {
+	display: flex;
+	justify-content: space-between;
+	width:100%;
+	align-items: center;
+	height: 6rem;
+}
+
 .nav_list .dropdown_wrap {
-	width: 25rem;
+	width: 100%;
 }
 
 .nav_list_scroll {
@@ -41,15 +56,29 @@ body,html {
 .arrow_wrap {
 	width: 100px;
 }
+
 .gowns_wrap {
-	padding: 1.25rem 10rem;
+	padding: 1.25rem 6rem;
 }
+
 .gowns_prev {
-	left: -7rem;
+	left: -4.5rem;
 }
 
 .gowns_next {
-	right: -7rem;
+	right: -4.5rem;
+}
+
+.traditions-wrap .info {
+	width: 30rem;
+}
+
+.traditions-wrap {
+	flex-wrap: wrap;
+}
+
+.traditions-wrap .right_pic {
+	flex-shrink: 0;
 }
 
 .events-wrap {
@@ -65,15 +94,23 @@ body,html {
 	font-weight: 600;
 	text-align: center;
 }
+
 .events-mobile .events-item {
 	display: flex;
 	justify-content: center;
 	align-items: center;
 	flex-direction: column;
 	line-height: 1.5;
+	font-size: 2rem;
+	padding:0 2rem;
+	margin-top: 1rem;
 	color: #9E9D98;
 }
-.events-mobile .events-item .img{
+.nav-box {
+	display: flex;
+	flex-direction: column-reverse;
+}
+.events-mobile .events-item .img {
 	width: 8rem;
 }
 
@@ -94,15 +131,20 @@ body,html {
 	display: flex;
 	flex-direction: column;
 }
+
 .ideas-wrap .info {
-	width:100%;
+	width: 100%;
 }
-.ideas-wrap .info .dec,.ideas-wrap .info .more-btn{
+
+.ideas-wrap .info .dec,
+.ideas-wrap .info .more-btn {
 	display: none;
 }
+
 .ideas-wrap .info .title {
 	text-align: center;
 }
+
 .ideas-wrap .ideas-show {
 	padding: 0 5rem;
 }
@@ -116,9 +158,11 @@ body,html {
 .footer-nav {
 	flex-direction: column;
 }
+
 .footer-nav li {
 	width: 100%;
 }
+
 .footer .app {
 	flex-direction: column;
 }
@@ -130,9 +174,11 @@ body,html {
 .footer .copyright {
 	flex-direction: column;
 }
+
 .footer .contact img {
 	width: 3rem;
-} 
+}
+
 .footer .tool img {
 	width: 6rem;
 }

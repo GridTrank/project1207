@@ -16,26 +16,53 @@ class Head extends HTMLElement {
         </div>
     </div>
     <div class="head_logo_wrap f_row">
-        <img src="./Elements/logo.png" class="logo" />
+       <div class="logo-wrap"> 
+			 <img src="./Elements/logo.png" class="logo" />
 				<div class="icon">
-					<img src="./Elements/BB homepage_Citrus Logo .png">
+					<img src="./Elements/menu_icon.png">
+				</div>
 				</div>
         <div class="label_list f_row"></div>
     </div>
-    <div class="nav_wrap f_row">
-            <div class="carousel-control-prev arrow_wrap"  data-bs-target="#carouselExample" data-bs-slide="prev">
-                <img src="./Elements/nav-left.png" class="arrow">
-            </div>
-            
-            <div class="nav_list_scroll">
-                <div class="nav_list f_row carousel slide" id="carouselExample" >
-                   
-                </div>
-            </div>
-            <div class="carousel-control-next arrow_wrap"  data-bs-target="#carouselExample" data-bs-slide="next">
-                <img src="./Elements/nav-right.png" class="arrow">
-            </div>
-        </div>
+    <div class="nav-box">
+		<div class="nav_wrap f_row">
+		        <div class="carousel-control-prev arrow_wrap"  data-bs-target="#carouselExample" data-bs-slide="prev">
+		            <img src="./Elements/nav-left.png" class="arrow">
+		        </div>
+		        
+		        <div class="nav_list_scroll">
+		            <div class="nav_list f_row carousel slide" id="carouselExample" >
+		               
+		            </div>
+		        </div>
+		        <div class="carousel-control-next arrow_wrap"  data-bs-target="#carouselExample" data-bs-slide="next">
+		            <img src="./Elements/nav-right.png" class="arrow">
+		        </div>
+		    </div>
+				<div class="banner_wrap">
+					<div id="carouselExampleAutoplaying" class="carousel slide" data-bs-ride="carousel">
+						<div class="carousel-indicators">
+							<button type="button" data-bs-target="#carouselExampleAutoplaying" data-bs-slide-to="0"
+								class="active" aria-current="true" aria-label="Slide 1"></button>
+							<button type="button" data-bs-target="#carouselExampleAutoplaying" data-bs-slide-to="1"
+								aria-label="Slide 2"></button>
+							<button type="button" data-bs-target="#carouselExampleAutoplaying" data-bs-slide-to="2"
+								aria-label="Slide 3"></button>
+						</div>
+						<div class="carousel-inner">
+							<div class="carousel-item active">
+								<img src="./Elements/BB homepage_Blissful Pay banner.png" class="d-block w-100" alt="...">
+							</div>
+							<div class="carousel-item ">
+								<img src="./Elements/BB homepage_Blissful Pay banner.png" class="d-block w-100" alt="...">
+							</div>
+							<div class="carousel-item ">
+								<img src="./Elements/BB homepage_Blissful Pay banner.png" class="d-block w-100" alt="...">
+							</div>
+						</div>
+					</div>
+				</div>
+		</div>
         `
 		$('#head').append(h1)
 		// 头部label
@@ -837,26 +864,43 @@ class Head extends HTMLElement {
 
 		]
 		let labelHtml = ''
-		for (var i = 0; i < headLabelList.length; i++) {
-			labelHtml += `<div class= "dropdown_wrap" data-index=${i}>
+		if (document.body.clientWidth >= 960) {
+			for (var i = 0; i < headLabelList.length; i++) {
+				labelHtml += `<div class= "dropdown_wrap" data-index=${i}>
                             <div data-bs-toggle="dropdown" class="label_item"> ${headLabelList[i].label}</div>
                             <div class="dropdown-menu" >
                                 <div class="menu_list f_row">
                     `
-			if (document.body.clientWidth >= 960) {
+
 				headLabelList[i].child.forEach((e) => {
 					labelHtml += `<div class="menu_item f_row" data-url=${e.url} >
 										                          <div class="menu_icon"><img  src="${e.icon || ''}" ></div>
 										                          ${e.c_label}
 										                      </div>`
 				})
-			}
 
-			labelHtml += ` </div>
+
+				labelHtml += ` </div>
             </div>
             </div>`
+			}
+			labelHtml += `<img src="./Elements/search.png" class="search"/>`
+		} else {
+
+			for (var i = 0; i < headLabelList[0].child.length; i++) {
+				labelHtml += `<div class= "dropdown_wrap" data-index=${i}>
+			                        <div data-bs-toggle="dropdown" class="label_item"> 
+															<div class="menu_icon"><img  src="${headLabelList[0].child[i].icon || ''}" ></div>
+															${headLabelList[0].child[i].c_label}
+															</div>
+			                        <div class="dropdown-menu" >
+			                            <div class="menu_list f_row">
+			                `
+				labelHtml += ` </div>
+			        </div>
+			        </div>`
+			}
 		}
-		labelHtml += `<img src="./Elements/search.png" class="search"/>`
 		$('.label_list').append(labelHtml)
 		$('.label_item').click(function(e) {
 			$(this).addClass('active')
@@ -864,10 +908,11 @@ class Head extends HTMLElement {
 
 		})
 		$('.head_logo_wrap .icon').click(function(e) {
-			if($('.label_list').is(':hidden')){
-				$('.label_list').show()
-			}else{
-				$('.label_list').hide()
+			console.log($('.label_list').hasClass('show'))
+			if ($('.label_list').hasClass('show')){
+				$('.label_list').removeClass('show')
+			} else {
+				$('.label_list').addClass('show')
 			}
 
 		})
