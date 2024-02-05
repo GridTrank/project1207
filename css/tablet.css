@@ -2,11 +2,10 @@ body,
 html {
 	min-width: 100% !important;
 	width: 100%;
-	
+
 }
 
-.head_top,
-.head_logo_wrap .label_list {
+.head_top {
 	display: none;
 }
 
@@ -18,13 +17,33 @@ html {
 	width: 100%;
 	z-index: 100000;
 	background-color: #fff;
-	
+	transition: max-height 1s;
+	max-height: 0px;
+	flex-direction: column;
+	overflow: hidden;
+	flex: auto;
+
 }
+.head_logo_wrap .label_list .menu_icon {
+	display: flex;
+}
+.head_logo_wrap .dropdown_wrap {
+	display: flex;
+	width: 100%;
+}
+
+.head_logo_wrap .label_list.show {
+	max-height: 2000px;
+}
+
 .head_logo_wrap .label_list .label_item {
 	padding: 1rem 2rem;
+	flex: 1;
+	display: flex;
 }
+
 .head_logo_wrap {
-	height: 6rem;
+	min-height: 6rem;
 	display: flex;
 	flex-direction: column;
 }
@@ -40,7 +59,7 @@ html {
 .head_logo_wrap .logo-wrap {
 	display: flex;
 	justify-content: space-between;
-	width:100%;
+	width: 100%;
 	align-items: center;
 	height: 6rem;
 }
@@ -102,14 +121,16 @@ html {
 	flex-direction: column;
 	line-height: 1.5;
 	font-size: 2rem;
-	padding:0 2rem;
+	padding: 0 2rem;
 	margin-top: 1rem;
 	color: #9E9D98;
 }
+
 .nav-box {
 	display: flex;
 	flex-direction: column-reverse;
 }
+
 .events-mobile .events-item .img {
 	width: 8rem;
 }
@@ -170,7 +191,19 @@ html {
 .footer .contact-wrap {
 	flex-direction: column;
 }
+.weddin-wrap .dec {
+	font-size: 1.8rem;
+}
+.ideas-wrap .item-info .name {
+	font-size: 1.8rem;
+}
+.ideas-wrap .item-info .dec {
+	font-size: 1.4rem;
+}
 
+.guid-wrap .dec {
+	font-size: 1.8rem;
+}
 .footer .copyright {
 	flex-direction: column;
 }
