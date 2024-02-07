@@ -4,8 +4,7 @@
 }
 
 .head_wrap .head_top {
-	padding: 20px;
-	box-sizing: border-box;
+	display: none;
 }
 
 .head_wrap .head_top .head_left .h_l_icon {
@@ -14,12 +13,12 @@
 }
 
 .head_wrap .head_top .head_left .h_l_txt {
-	font-size: 20px;
+	font-size: 1.125rem;
 	color: #9E9D98;
 }
 
 .head_wrap .head_top .head_right .head_s1 {
-	font-size: 20px;
+	font-size: 1.125rem;
 	color: #9E9D98;
 	text-decoration: underline;
 	cursor: pointer;
@@ -44,14 +43,14 @@
 .head_logo_wrap {
 	display: flex;
 	justify-content: space-between;
-	padding: 0 1rem;
+	padding:0 1rem;
 	align-items: center;
 	border-bottom: 2px solid #ddd;
 	position: relative;
 }
 
 .head_logo_wrap .logo {
-	width: 18rem;
+	width: 12rem;
 	margin-right: 100px;
 }
 .head_logo_wrap .icon {
@@ -146,7 +145,25 @@
 	box-shadow:2px 2px 5px rgba(0, 0, 0, 0.3);
 	position: absolute;
 }
-
+.weddin-wrap {
+	flex-direction: column;
+}
+.weddin-wrap .title {
+	display: flex;
+	margin-top: 1.25rem;
+}
+.weddin-wrap .pic {
+	width: 100%;
+	margin: 0;
+}
+.weddin-wrap .img-box {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+}
+.weddin-wrap .dec{
+	width: 100%;
+}
 .nav_wrap {
 	justify-content: space-between;
 	align-items: center;
