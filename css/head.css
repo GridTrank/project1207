@@ -3,7 +3,9 @@
 	box-sizing: border-box;
 }
 
-
+.head_wrap .head_top {
+	padding: 0 1.25rem;
+}
 .head_wrap .head_top .head_left .h_l_icon {
 	width: 20px;
 	height: 20px;
