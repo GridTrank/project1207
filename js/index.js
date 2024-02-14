@@ -824,8 +824,8 @@ function initHeader() {
 
 	let navHtml = '<div class="carousel-inner">'
 
-	var newNavList = group(navList, parseInt(document.documentElement.clientWidth / 190))
-	console.log(parseInt(document.documentElement.clientWidth / 190))
+	var newNavList = group(navList, parseInt(document.documentElement.clientWidth / 230))
+	console.log(parseInt(document.documentElement.clientWidth / 200))
 	for (var i = 0; i < newNavList.length; i++) {
 		navHtml += `
 	                <div class="carousel-item ${i===0?'active':''}" >
@@ -865,7 +865,7 @@ function setRem() {
 	let width = document.documentElement.clientWidth
 	let num = 0
 	if (width <= 480) {
-		num = 375
+		num = 900
 	} else if (width <= 980 && width > 480) {
 		num = 1220
 	} else if (width <= 1300 && width > 980) {

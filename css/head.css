@@ -3,9 +3,6 @@
 	box-sizing: border-box;
 }
 
-.head_wrap .head_top {
-	display: none;
-}
 
 .head_wrap .head_top .head_left .h_l_icon {
 	width: 20px;
