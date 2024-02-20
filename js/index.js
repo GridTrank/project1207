@@ -856,6 +856,63 @@ function initHeader() {
 	navHtml += '</div>'
 	$('.nav_list').html('')
 	$('.nav_list').append(navHtml)
+
+
+	// gowns
+	var gownsList = [{
+		pic:'./Elements/eg.jpeg',
+		name:'name',
+		info:'info',
+	},{
+		pic:'./Elements/eg.jpeg',
+		name:'name',
+		info:'info',
+	},{
+		pic:'./Elements/eg.jpeg',
+		name:'name',
+		info:'info',
+	},{
+		pic:'./Elements/eg.jpeg',
+		name:'name',
+		info:'info',
+	},{
+		pic:'./Elements/eg.jpeg',
+		name:'name',
+		info:'info',
+	},{
+		pic:'./Elements/eg.jpeg',
+		name:'name',
+		info:'info',
+	}];
+	
+	let gownsHtml = ''
+	var gownsNum = group(gownsList, parseInt(document.documentElement.clientWidth / 300))
+
+	for (var i = 0; i < gownsNum.length; i++) {
+		gownsHtml += `
+	                <div class="carousel-item ${i===0?'active':''}" ><div class="f_row wrap">
+	            `
+		let cGownsList = gownsNum[i]
+
+		for (var j = 0; j < cGownsList.length; j++) {
+			gownsHtml+=`
+				<div class="item">
+					<img src="${cGownsList[j].pic}" class="d-block w-100"
+						alt="...">
+						<div class="name">${cGownsList[j].name}</div>
+						<div class="info">${cGownsList[j].info}</div>
+				</div>
+			`
+			
+		}
+		gownsHtml += ` </div></div>`
+
+	}
+	gownsHtml += '</div>'
+	console.log(gownsHtml)
+	$('#gowns .carousel-inner').html('')
+	$('#gowns .carousel-inner').append(gownsHtml)
+
 }
 initHeader()
 
@@ -931,13 +988,13 @@ $('.menu_item').click(function(e) {
 
 })
 $('.search .btn').click(function(e) {
-	if($(this).parent().hasClass('show')){
-		if($(this).prev ().val() === ''){
+	if ($(this).parent().hasClass('show')) {
+		if ($(this).prev().val() === '') {
 			$(this).parent().removeClass('show')
-		}else{
+		} else {
 			// 搜索
-			}
-	}else{
+		}
+	} else {
 		$(this).parent().addClass('show')
 	}
 })

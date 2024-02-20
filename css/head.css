@@ -144,25 +144,7 @@
 	box-shadow:2px 2px 5px rgba(0, 0, 0, 0.3);
 	position: absolute;
 }
-.weddin-wrap {
-	flex-direction: column;
-}
-.weddin-wrap .title {
-	display: flex;
-	margin-top: 1.25rem;
-}
-.weddin-wrap .pic {
-	width: 100%;
-	margin: 0;
-}
-.weddin-wrap .img-box {
-	display: flex;
-	flex-wrap: wrap;
-	justify-content: center;
-}
-.weddin-wrap .dec{
-	width: 100%;
-}
+
 .nav_wrap {
 	justify-content: space-between;
 	align-items: center;

@@ -93,6 +93,25 @@ html {
 .gowns_wrap {
 	padding: 1.25rem 6rem;
 }
+.weddin-wrap {
+	flex-direction: column;
+}
+.weddin-wrap .title {
+	display: flex;
+	margin-top: 1.25rem;
+}
+.weddin-wrap .pic {
+	width: 100%;
+	margin: 0;
+}
+.weddin-wrap .img-box {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+}
+.weddin-wrap .dec{
+	width: 100%;
+}
 .weddin-wrap .dec {
 	font-size: 1.8rem;
 }

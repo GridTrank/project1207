@@ -48,6 +48,22 @@ body {
 .gowns_wrap {
 	padding: 1.25rem 9.375rem;
 }
+.gowns_wrap .gowns_show .wrap {
+	justify-content: center;
+}
+.gowns_wrap .gowns_show .item {
+	text-align: center;
+	opacity: 0.6;
+	cursor: pointer;
+	width:18.75rem;
+}
+.gowns_wrap .gowns_show .item:hover {
+	opacity: 1;
+}
+
+.gowns_wrap .gowns_show .item:hover .name {
+	color: #E1C896;
+}
 
 .more-btn {
 	display: flex;
